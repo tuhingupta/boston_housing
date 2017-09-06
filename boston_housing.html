@@ -12033,6 +12033,12 @@ Standard deviation of prices: $165,171.13
 <li>Lower value for <code>'LSTAT'</code> would generally indicate a higher value of <code>'MEDV'</code></li>
 <li>A lower value for <code>'PTRATIO'</code> ratio would generally indicate a higher value of <code>'MEDV'</code></li>
 </ul>
+<p><strong>Justification</strong></p>
+<ul>
+<li>More rooms would mean bigger house, hence a higher <code>'MEDV'</code></li>
+<li>Lower <code>'LSTAT'</code> means people in higher income group living in that neighborhood, which generally means that the prices of the homes would be higher in that area</li>
+<li>Lower <code>'PTRATIO'</code> is a good indication that the students are getting better attention from teachers since there are less students per teacher to manage. This indicates a better school and better education results. This indicator will indicate that a lower <code>'PTRATIO'</code> will indicate a higher price of home hence higher <code>'MEDV'</code></li>
+</ul>
 
 </div>
 </div>
@@ -13857,7 +13863,8 @@ xhhjQsb/A6VWil0hjnM5AAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <p>Model with max depth 4 best generalizes to unseen data.
-The training score seems to plateau here, indicating the highest possible score for the model's ability to generalize to unseen data. Gap between the training score and testing score does not seem to be substantial too, indicating that the model may not be suffering from a high variance scenario.</p>
+The validation score seems to plateau here, indicating the highest possible score for the model's ability to generalize to unseen data.</p>
+<p>Gap between the training score and validation score does not seem to be substantial, indicating that the model may not be suffering from a high variance scenario.</p>
 
 </div>
 </div>
@@ -14175,8 +14182,8 @@ Predicted selling price for Client 3&#39;s home: $931,636.36
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>
-Predicted selling price for Client 1's home: $403,025.00
+<p><strong>Answer: </strong></p>
+<p>Predicted selling price for Client 1's home: $403,025.00
 Predicted selling price for Client 2's home: $237,478.72
 Predicted selling price for Client 3's home: $931,636.36</p>
 <p>From earlier we know that:
@@ -14186,6 +14193,15 @@ Mean price: $454,342.94
 Median price $438,900</p>
 <p>The price seem reasonable.</p>
 <p>From the data-set, it seems the price for Client 1 &amp; 2 homes are below the mean. And the price for client 3's home is way above mean and median. However that home has 8 bed rooms and have very low proverty rate and a very low teacher-student ratio. All these factors resulting in high price of the home.</p>
+<ul>
+<li><p>Client 3's home price is higher than Client 1's home because it has more rooms (8 &gt; 5), its neighbourhood poverty is way less ( 3 percent &lt; 17 percent) and it has a better student-teacher ratio.</p>
+</li>
+<li><p>Client 3's home price is higher than Client 2's home because it has more rooms (8 &gt; 4), its neighbourhood poverty is much less ( 3 percent &lt; 32 percent) and it has a better student-teacher ratio.</p>
+</li>
+<li><p>Client 1's home price is higher than Client 2's home because it has more rooms (5 &gt; 4), its neighbourhood poverty is way less ( 17 percent &lt; 32 percent) and it has a better student-teacher ration.</p>
+</li>
+</ul>
+<p>All these factors suggest that the model computed correct predictions.</p>
 
 </div>
 </div>
@@ -14295,6 +14311,19 @@ Range in prices: $73,357.39
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
